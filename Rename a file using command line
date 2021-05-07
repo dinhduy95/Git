@@ -1,1 +1,19 @@
-
+1. Open Git Bash.
+2. Change the current working directory to your local repository.
+3. Rename the file, specifying the old file name and the new name you'd like to give the file. This will stage your change for commit.
+    $ git mv old_filename new_filename
+4. Use git status to check the old and new file names.
+    $ git status
+    > # On branch your-branch
+    > # Changes to be committed:
+    > #   (use "git reset HEAD ..." to unstage)
+    > #
+    > #     renamed: old_filename -> new_filename
+    > #
+5. Commit the file that you've staged in your local repository.
+    $ git commit -m "Rename file"
+    # Commits the tracked changes and prepares them to be pushed to a remote repository.
+    # To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit and add the file again.
+6. Push the changes in your local repository to GitHub.
+    $ git push origin your-branch
+    # Pushes the changes in your local repository up to the remote repository you specified as the origin
